@@ -17,5 +17,7 @@ And edit .env with your own settings.
 # Install a fresh D8 site with composer
 
 ```bash
-composer create-project drupal/drupal
+cd drupal/
+composer install
 ```
+
