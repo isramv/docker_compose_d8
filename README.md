@@ -25,23 +25,6 @@ And edit .env with your own settings.
 $ docker-compose up -d
 ```
 
-# Install a fresh D8 site with composer
-
-```bash
-docker-compose exec --user=82 php composer install
-```
-
-to stop it
-```bash
-$ docker-compose stop
-```
-
-# Database
-
-## example using sequel Pro
-
-![configuration](https://www.evernote.com/l/Ar-v6WAoltRM0q9PH2PVg1fGoc5YspwdLEwB/image.png)
-
 # add your site to hosts file.
 
 In our env_example file the variable **TRAEFIK_HOST** is set to `site.local`
@@ -49,8 +32,31 @@ In our env_example file the variable **TRAEFIK_HOST** is set to `site.local`
 ```bash
 $ sudo vim /etc/hosts
 ```
-Add that site to your hosts file you can put it in the same line as shown in the following screenshot.
+Add that site to your localhost line:
 
 ```bash
 127.0.0.1       localhost site.local
 ```
+
+# Install a fresh D8 site with composer
+
+```bash
+docker-compose exec --user=82 php composer install
+```
+to stop it
+```bash
+$ docker-compose stop
+```
+
+# Database
+
+## installing Drupal, use mariadb instead of localhost:
+
+![isntalling d8](https://www.evernote.com/l/Ar8MCZ_MMGdLEJNL7_RK9wC8MMh6j5MEHgwB/image.png)
+
+
+## Acessing with sequel Pro client
+
+![configuration](https://www.evernote.com/l/Ar-v6WAoltRM0q9PH2PVg1fGoc5YspwdLEwB/image.png)
+
+
