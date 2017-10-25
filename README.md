@@ -8,13 +8,13 @@
 clone the repo:
 
 ```bash
-git clone git@github.com:isramv/docker_compose_d8.git
+$ git clone git@github.com:isramv/docker_compose_d8.git
 ```
 
 Copy or rename env_example to .env
 
 ```bash
-cp env_example .env
+$ cp env_example .env
 ```
 
 And edit .env with your own settings.
@@ -41,7 +41,7 @@ Add that site to your localhost line:
 # Install a fresh D8 site with composer
 
 ```bash
-docker-compose exec --user=82 php composer install
+$ docker-compose exec --user=82 php composer install
 ```
 to stop it
 ```bash
@@ -62,6 +62,7 @@ $ docker-compose stop
 # drush stuff
 
 ```bash
-docker-compose exec --user=82 php drush -r /var/www/html/web status
-docker-compose exec --user=82 php drush -r /var/www/html/web uli
+$ docker-compose exec --user=82 php drush -r /var/www/html/web status
+$ docker-compose exec --user=82 php drush -r /var/www/html/web uli
 ```
+# drupal console site aliases (only D8).
