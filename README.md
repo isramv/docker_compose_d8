@@ -2,8 +2,8 @@
 
 ## Requirements 
 
-- Docker for mac
-- composer
+- [Docker for mac](https://www.docker.com/community-edition)
+- [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 clone the repo:
 
