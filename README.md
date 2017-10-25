@@ -86,5 +86,5 @@ $ docker-compose exec --user=82 ngnix sh
 
 php
 ```bash
-$ docker-compose exec --user=82 ngnix sh
+$ docker-compose exec --user=82 nginx sh
 ```
