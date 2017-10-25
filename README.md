@@ -22,8 +22,7 @@ And edit .env with your own settings.
 # Install a fresh D8 site with composer
 
 ```bash
-cd drupal/
-composer install
+docker-compose exec --user=82 php composer install
 ```
 
 # run docker-compose
