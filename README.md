@@ -1,5 +1,10 @@
 # docker compose D8
 
+## Requirements 
+
+- Docker for mac
+- composer
+
 clone the repo:
 
 ```bash
@@ -21,3 +26,19 @@ cd drupal/
 composer install
 ```
 
+# run docker-compose
+
+```bash
+$ docker-compose up -d
+```
+
+to stop it
+```bash
+$ docker-compose stop
+```
+
+# Database
+
+## example using sequel Pro
+
+![configuration](https://www.evernote.com/l/Ar-v6WAoltRM0q9PH2PVg1fGoc5YspwdLEwB/image.png)
