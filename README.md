@@ -70,5 +70,10 @@ $ docker-compose exec --user=82 php drush -r /var/www/html/web uli
 user login
 
 ```bash
-docker-compose exec --user=82 php drupal @site.local ulu 1
+$ docker-compose exec --user=82 php drupal @site.local ulu 1
+```
+# destroy docker instance
+
+```bash
+$ docker-compose down -v
 ```
