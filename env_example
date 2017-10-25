@@ -1,0 +1,13 @@
+# Here you can cutomize your variables.
+# ENV
+ENVIRONMENT=local
+
+# Database
+DATABASE_NAME=drupal
+DATABASE_USER=drupal
+DATABASE_PASSWORD=drupal
+DATABASE_HOST=mariadb
+DATABASE_PORT=3306
+
+# Traefik host 
+TRAEFIK_HOST=site.local
