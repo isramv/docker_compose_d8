@@ -59,4 +59,9 @@ $ docker-compose stop
 
 ![configuration](https://www.evernote.com/l/Ar-v6WAoltRM0q9PH2PVg1fGoc5YspwdLEwB/image.png)
 
+# drush stuff
 
+```bash
+docker-compose exec --user=82 php drush -r /var/www/html/web status
+docker-compose exec --user=82 php drush -r /var/www/html/web uli
+```
