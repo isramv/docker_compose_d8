@@ -66,3 +66,9 @@ $ docker-compose exec --user=82 php drush -r /var/www/html/web status
 $ docker-compose exec --user=82 php drush -r /var/www/html/web uli
 ```
 # drupal console site aliases (only D8).
+
+user login
+
+```bash
+docker-compose exec --user=82 php drupal @site.local ulu 1
+```
