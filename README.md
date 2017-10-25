@@ -77,3 +77,14 @@ $ docker-compose exec --user=82 php drupal @site.local ulu 1
 ```bash
 $ docker-compose down -v
 ```
+# ssh your docker image
+
+nginx
+```bash
+$ docker-compose exec --user=82 ngnix sh
+```
+
+php
+```bash
+$ docker-compose exec --user=82 ngnix sh
+```
