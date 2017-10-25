@@ -19,16 +19,16 @@ cp env_example .env
 
 And edit .env with your own settings.
 
-# Install a fresh D8 site with composer
-
-```bash
-docker-compose exec --user=82 php composer install
-```
-
 # run docker-compose
 
 ```bash
 $ docker-compose up -d
+```
+
+# Install a fresh D8 site with composer
+
+```bash
+docker-compose exec --user=82 php composer install
 ```
 
 to stop it
