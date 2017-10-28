@@ -48,9 +48,25 @@ to stop it
 $ docker-compose stop
 ```
 
+# Aliases
+
+A bash script to set up aliases
+
+```bash
+source scripts/env
+drush status
+```
+
 # Database
 
 ## installing Drupal, use mariadb instead of localhost:
+
+```bash
+drush -y site-install --db-url=mysql://drupal:drupal@mariadb/drupal
+drush uli
+```
+
+or via UI:
 
 ![isntalling d8](https://www.evernote.com/l/Ar8MCZ_MMGdLEJNL7_RK9wC8MMh6j5MEHgwB/image.png)
 
