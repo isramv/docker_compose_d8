@@ -1,5 +1,9 @@
 # docker compose D8
 
+# Credits
+
+- https://github.com/weknowinc
+
 ## Requirements 
 
 - [Docker](https://www.docker.com/community-edition)
