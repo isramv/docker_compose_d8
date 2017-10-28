@@ -1,9 +1,13 @@
 # docker compose D8
 
+# Credits
+
+- https://github.com/weknowinc
+
 ## Requirements 
 
-- Docker for mac
-- composer
+- [Docker](https://www.docker.com/community-edition)
+- [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 clone the repo:
 
@@ -97,10 +101,10 @@ $ docker-compose down -v
 
 nginx
 ```bash
-$ docker-compose exec --user=82 ngnix sh
+$ docker-compose exec --user=82 nginx sh
 ```
 
 php
 ```bash
-$ docker-compose exec --user=82 ngnix sh
+$ docker-compose exec --user=82 php sh
 ```
