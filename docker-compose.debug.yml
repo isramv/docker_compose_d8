@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+
+  php:
+    # this doesn't work with wodby/drupal-php, see scripts/env
+    # environment:
+    #   PHP_IDE_CONFIG: "serverName=${TRAEFIK_HOST}"
+    #   XDEBUG_CONFIG: "profiler_output_dir=/tmp/webgrind"
+    volumes:
+      - "webgrind:/tmp/webgrind:rw"
+
+  webgrind:
+    container_name: webgrind
+    image: tbfisher/webgrind
+    environment:
+      XDEBUG_OUTPUT_DIR: /tmp
+      WEBGRIND_STORAGE_DIR: /tmp
+      PHP_MAX_EXECUTION_TIME: 1200
+    volumes:
+      - "webgrind:/tmp:rw"
+    labels:
+      - 'traefik.backend=webgrind'
+      - 'traefik.port=8080'
+      - 'traefik.frontend.rule=Host:webgrind.${TRAEFIK_HOST}'
+
+volumes:
+  webgrind:
+    driver: local

@@ -40,7 +40,7 @@ $ sudo vim /etc/hosts
 Append:
 
 ```
-127.0.0.1 site.local mailhog.site.local
+127.0.0.1 site.local mailhog.site.local webgrind.site.local
 ```
 
 # Install a fresh D8 site with composer
@@ -93,6 +93,34 @@ user login
 ```bash
 $ docker-compose exec --user=82 php drupal @site.local ulu 1
 ```
+
+# Debugging
+
+## Xdebug
+
+[`scripts/env`](scripts/env) defines a function to enable/disable xdebug:
+
+```bash
+# enable
+xdebug en
+# disable
+xdebug dis
+```
+
+## Profile with Webgrind
+
+To use [webgrind](https://github.com/jokkedk/webgrind) to profile php, uncomment the line in your [`.env`][env_example].
+
+```bash
+COMPOSE_FILE=docker-compose.yml:docker-compose.debug.yml
+```
+
+and run up again to rebuild containers
+
+```bash
+docker-compose up -d
+```
+
 # destroy docker instance
 
 ```bash

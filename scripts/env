@@ -2,4 +2,39 @@
 
 source .env
 
+xdebug() {
+  ini_path=/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+  so_path=/usr/local/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so
+  # usage
+  if [[ -z "$1" ]]; then
+    cat << EOF
+usage: xdebug [en|dis]
+EOF
+    return
+  fi
+  # update ini
+  if [[ $1 == 'en' ]]; then
+    # detect OS, mac uses special hostname to connect back to host
+    unameOut="$(uname -s)"
+    case "${unameOut}" in
+        Darwin*)    remote_host=docker.for.mac.localhost;;
+        *)          remote_host=127.0.0.1
+    esac
+    ini_contents=$(cat << EOF
+zend_extension=$so_path
+[xdebug]
+xdebug.remote_enable=1
+xdebug.remote_host=$remote_host
+xdebug.profiler_enable_trigger=1
+xdebug.profiler_output_dir=/tmp/webgrind
+EOF
+)
+    docker-compose exec --user=82 php /bin/bash -c "echo '$ini_contents' > '$ini_path'"
+  else
+    docker-compose exec --user=82 php /bin/bash -c "echo -n > '$ini_path'"
+  fi
+  # restart php-fpm
+  docker-compose exec --user=82 php /bin/kill -USR2 1
+}
+
 alias drush="docker-compose exec --user=82 php drush -r /var/www/html/web -l $TRAEFIK_HOST"
