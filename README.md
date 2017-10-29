@@ -36,7 +36,7 @@ $ sudo vim /etc/hosts
 Append:
 
 ```
-127.0.0.1 site.local
+127.0.0.1 site.local mailhog.site.local
 ```
 
 # Install a fresh D8 site with composer
