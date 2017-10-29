@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# exit on error, unset vars
-set -eu
-# exit early for errors in pipelines
-set -o pipefail
-
 source .env
 
 alias drush="docker-compose exec --user=82 php drush -r /var/www/html/web -l $TRAEFIK_HOST"
