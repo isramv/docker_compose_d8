@@ -29,12 +29,16 @@ xdebug.profiler_enable_trigger=1
 xdebug.profiler_output_dir=/tmp/webgrind
 EOF
 )
+    echo "enabling xdebug via $ini_path ..."
     docker-compose exec --user=82 php /bin/bash -c "echo '$ini_contents' > '$ini_path'"
   else
+    echo "disabling xdebug by wiping $ini_path ..."
     docker-compose exec --user=82 php /bin/bash -c "echo -n > '$ini_path'"
   fi
   # restart php-fpm
+  echo restarting php-fpm...
   docker-compose exec --user=82 php /bin/kill -USR2 1
+  echo done.
 }
 
 alias drush="docker-compose exec --user=82 php drush -r /var/www/html/web -l $TRAEFIK_HOST"
