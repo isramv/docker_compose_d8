@@ -2,5 +2,6 @@
 
 # Composer-created -- adjust depending on what you want in your repo.
 /composer.lock
+/config
 /vendor
 /web
