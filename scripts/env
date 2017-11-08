@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source .env
+
+alias drush="docker-compose exec --user=82 php drush -r /var/www/html/web -l $TRAEFIK_HOST"
