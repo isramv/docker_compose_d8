@@ -1,9 +1,5 @@
 # docker compose D8
 
-# Credits
-
-- https://github.com/weknowinc
-
 ## Requirements 
 
 - [Docker](https://www.docker.com/community-edition)
@@ -144,3 +140,7 @@ php
 ```bash
 $ docker-compose exec --user=82 php sh
 ```
+
+# Credits
+
+- https://github.com/weknowinc
