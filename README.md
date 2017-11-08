@@ -31,15 +31,16 @@ $ docker-compose up -d
 
 # add your site to hosts file.
 
-In our env_example file the variable **TRAEFIK_HOST** is set to `site.local`
+In our `env_example` file the variable **`TRAEFIK_HOST`** is set to `site.local`
 
 ```bash
 $ sudo vim /etc/hosts
 ```
-Add that site to your localhost line:
 
-```bash
-127.0.0.1       localhost site.local
+Append:
+
+```
+127.0.0.1 site.local mailhog.site.local
 ```
 
 # Install a fresh D8 site with composer
