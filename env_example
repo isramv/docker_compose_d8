@@ -1,4 +1,5 @@
 # Here you can cutomize your variables.
+
 # ENV
 ENVIRONMENT=local
 
@@ -9,5 +10,9 @@ DATABASE_PASSWORD=drupal
 DATABASE_HOST=mariadb
 DATABASE_PORT=3306
 
-# Traefik host 
+# Traefik host
 TRAEFIK_HOST=site.local
+
+# Docker compose files (optional, default is docker-compose.yml)
+# Debugging extras
+#COMPOSE_FILE=docker-compose.yml:docker-compose.debug.yml
