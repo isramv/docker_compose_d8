@@ -126,6 +126,13 @@ docker-compose up -d
 ```bash
 $ docker-compose down -v
 ```
+
+Delete all build artifacts (code).
+
+```bash
+$ chmod -R +w web/ && rm -rf config/ vendor/ web/ composer.lock
+```
+
 # ssh your docker image
 
 nginx
